@@ -460,7 +460,7 @@ namespace SUNDIALS
                                        mass_matrix_times_vector_setup_callback :
                                        ARKLsMassTimesSetupFn(nullptr),
                                      mass_matrix_times_vector_callback,
-                                     this);
+                                     &callback_ctx);
         AssertARKode(status);
 
         if (mass_preconditioner_solve)
